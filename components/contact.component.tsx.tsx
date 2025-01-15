@@ -1,5 +1,7 @@
 "use client";
-import React, { useState } from "react"; 
+import VALUES from "@/constants/values";
+import { PopupButton } from "@typeform/embed-react";
+import React, { useState } from "react";
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -17,46 +19,29 @@ const ContactForm = () => {
   return (
     <>
       {/* Form Card */}
-      <div className="max-w-6xl mx-auto flex justify-evenly bg-[#FFC839] rounded-3xl  rounded-tl-none p-12 relative">
+      <div className="max-w-4xl sm:max-w-6xl mx-1  sm:mx-auto p-2 sm:p-12 bg-[#FFC839] rounded-3xl flex items-center flex-col justify-center text-center  rounded-tl-none ">
         {/* Form Content */}
 
         <div className="w-full">
           <h2 className="text-3xl font-bold text-gray-700 mb-4">
-            Take a 5-Minute
-            <br />
-            Survey!
+            Take a 5-Minute Survey!
           </h2>
 
-          <p className="text-gray-700 mb-6 w-3/4 font-medium">
+          <p className="text-gray-700 mb-6 sm:w-3/4 mx-auto font-medium">
             ArthaNidhi is exploring the challenges businesses face in scaling
             up. Your feedback will help us design a fund and ecosystem that
             truly supports growth.
           </p>
         </div>
-        <form onSubmit={handleSubmit} className="w-full">
-          <div>
-            <label htmlFor="name">Name</label>
-            <input
-              type="text"
-              className="w-full mt-2 p-3 rounded-xl shadow-xl  rounded-tl-none border border-gray-300"
-            />
-          </div>
-
-          <div className="mt-5">
-            <label htmlFor="business">Business Name</label>
-            <input
-              type="text"
-              className="w-full mt-2 p-3 rounded-xl shadow-xl  rounded-tl-none border border-gray-300"
-            />
-          </div>
-
+        <PopupButton id={VALUES.TYPEFORM_ID} className="">
           <button
-            type="submit"
-            className="mt-5 rounded-xl shadow-xl float-right bg-[#FD8641]  rounded-tl-none text-white px-6 py-3 rounded-lg hover:bg-orange-500 transition-colors duration-200"
+            type="button"
+            className="sm:mt-5 rounded-xl shadow-xl float-right bg-[#FD8641]  rounded-tl-none text-white px-6 py-3 rounded-lg hover:bg-orange-500 transition-colors duration-200"
           >
-            TAKE SURVEY
+            {" "}
+            Take Survey
           </button>
-        </form>
+        </PopupButton>
       </div>
 
       {/* Additional Contact Info */}

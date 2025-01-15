@@ -10,7 +10,7 @@ const HeaderComponent = () => {
       <div className="flex items-center gap-2 w-full">
         <Image src={Logo.src} alt="ArthaNidhi Logo" width={150} height={150} />
       </div>
-      <div className="flex items-center justify-around gap-4 text-xs w-full">
+      <div className="hidden sm:flex items-center justify-around gap-4 text-xs w-full">
         <div>
           <Button variant="ghost" className="text-xs font-semibold">
             Home
@@ -22,7 +22,7 @@ const HeaderComponent = () => {
             Contact
           </Button>
         </div>
-        <div>
+        <div >
           <Button variant="ghost" className="text-xs font-semibold">
             <CircleUser />
             Log in
