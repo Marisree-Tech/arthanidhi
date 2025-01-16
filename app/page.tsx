@@ -126,7 +126,7 @@ const Page = () => {
           id="home"
           className="max-w-7xl mx-4 sm:mx-8 lg:mx-auto flex flex-col sm:flex-row items-center"
         >
-          <div className="pt-8 sm:pt-16 lg:pt-36 text-center sm:text-left">
+          <div className="pt-8 sm:pt-16 lg:pt-0 text-center sm:text-left">
             <h1 className="text-[#434343] text-3xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-snug lg:leading-tight">
               Empowering Businesses.
               <br />
@@ -154,7 +154,7 @@ const Page = () => {
           </div>
         </div>
 
-        <div className="max-w-6xl mx-4 sm:mx-8 lg:mx-auto bg-[#5ABB76] flex flex-col sm:flex-row items-center justify-center text-white font-bold text-lg sm:text-2xl py-6 sm:py-12 lg:py-20 shadow-2xl rounded-3xl rounded-tr-none">
+        <div className="max-w-6xl mx-4 mt-2 sm:mx-8 lg:mx-auto bg-[#5ABB76] flex flex-col sm:flex-row items-center justify-center text-white font-bold text-lg sm:text-2xl py-6 sm:py-12 lg:py-20 shadow-2xl rounded-3xl rounded-tr-none">
           <ChartNoAxesCombined className="h-10 w-10 sm:h-14 sm:w-14 lg:h-16 lg:w-16" />
           <p className="mt-4 sm:mt-0 sm:ml-6 lg:ml-12 text-center sm:text-left text-sm sm:text-xl lg:text-4xl leading-tight">
             Only 8% of companies manage to scale
