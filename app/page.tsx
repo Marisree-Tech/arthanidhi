@@ -46,13 +46,25 @@ const Page = () => {
           </div>
           <div className="hidden sm:flex items-center justify-around gap-4 text-xs w-full">
             <div>
-              <Button variant="ghost" className="text-xs font-semibold"   onClick={() => scrollToSection('home')}>
+              <Button
+                variant="ghost"
+                className="text-xs font-semibold"
+                onClick={() => scrollToSection("home")}
+              >
                 Home
               </Button>
-              <Button variant="ghost" className="text-xs font-semibold"   onClick={() => scrollToSection('about')}>
+              <Button
+                variant="ghost"
+                className="text-xs font-semibold"
+                onClick={() => scrollToSection("about")}
+              >
                 About Us
               </Button>
-              <Button variant="ghost" className="text-xs font-semibold"   onClick={() => scrollToSection('contact')}>
+              <Button
+                variant="ghost"
+                className="text-xs font-semibold"
+                onClick={() => scrollToSection("contact")}
+              >
                 Contact
               </Button>
             </div>
@@ -112,32 +124,39 @@ const Page = () => {
 
         <div
           id="home"
-          className="max-w-6xl mx-8 sm:mx-auto flex flex-col sm:flex-row"
+          className="max-w-7xl mx-4 sm:mx-8 lg:mx-auto flex flex-col sm:flex-row items-center"
         >
-          <div className="pt-8 sm:pt-36">
-            <h1 className="text-[#434343] text-4xl sm:text-6xl font-bold mb-6 leading-tight">
+          <div className="pt-8 sm:pt-16 lg:pt-36 text-center sm:text-left">
+            <h1 className="text-[#434343] text-3xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-snug lg:leading-tight">
               Empowering Businesses.
               <br />
               Driving Growth.
             </h1>
 
-            <p className="text-gray-700 text-lg sm:text-2xl italic mb-12 max-w-2xl">
+            <p className="text-gray-700 text-base sm:text-lg lg:text-2xl italic mb-8 sm:mb-12 max-w-lg sm:max-w-xl lg:max-w-2xl">
               A platform dedicated to helping businesses scale, innovate, and
               create lasting impact.
             </p>
 
-            <button className="text-white bg-[#FD8641] px-8 py-4 rounded-xl text-sm font-semibold transition-colors duration-300">
+            <button className="text-white bg-[#FD8641] px-6 sm:px-8 py-3 sm:py-4 rounded-lg lg:rounded-xl text-sm sm:text-base font-semibold transition-colors duration-300 hover:bg-[#e57a34]">
               LEARN MORE
             </button>
           </div>
-          <div>
-            <Image src={PersonImg.src} alt="" width={600} height={600} />
+
+          <div className="mb-8 sm:mb-0">
+            <Image
+              src={PersonImg.src}
+              alt="Person Illustration"
+              width={400}
+              height={400}
+              className="w-72 sm:w-96 lg:w-[600px] h-auto"
+            />
           </div>
         </div>
 
-        <div className="max-w-6xl mx-2 sm:mx-auto bg-[#5ABB76]  flex items-center justify-center text-white font-bold text-2xl py-8 sm:py-20 shadow-2xl rounded-3xl rounded-tr-none">
-          <ChartNoAxesCombined className="h-8 w-8 sm:h-12 sm:w-12" />
-          <p className="ml-2 sm:ml-12 text-sm sm:text-4xl">
+        <div className="max-w-6xl mx-4 sm:mx-8 lg:mx-auto bg-[#5ABB76] flex flex-col sm:flex-row items-center justify-center text-white font-bold text-lg sm:text-2xl py-6 sm:py-12 lg:py-20 shadow-2xl rounded-3xl rounded-tr-none">
+          <ChartNoAxesCombined className="h-10 w-10 sm:h-14 sm:w-14 lg:h-16 lg:w-16" />
+          <p className="mt-4 sm:mt-0 sm:ml-6 lg:ml-12 text-center sm:text-left text-sm sm:text-xl lg:text-4xl leading-tight">
             Only 8% of companies manage to scale
           </p>
         </div>
@@ -178,11 +197,14 @@ const Page = () => {
 
         <ArrowComponent
           id="ourVision"
-          className="h-[10rem] relative transform -scale-x-100 rotate-[39deg] left-52 top-4 sm:left-8 sm:top-6 md:left-32 md:top-8 lg:left-64 lg:top-12 xl:left-96 xl:top-16 2xl:left-[64rem] 2xl:top-16 transition-all duration-300"
+          className="h-[10rem] relative transform -scale-x-100 rotate-[39deg] 
+          left-52 top-4 sm:left-8 sm:top-6 md:left-[42rem] lg-left-48 md:top-4
+          lg:left-64 lg:top-12 xl:left-96 xl:top-16 2xl:left-[64rem] 2xl:top-16 
+          transition-all duration-300"
           fill="#FD8641"
         />
         {/* Vision & Goal */}
-        <div className="max-w-6xl mx-2 sm:mx-auto relative">
+        <div className="max-w-6xl mx-2 sm:mx-auto md:mx-2 lg:mx-auto relative">
           {/* Vision Card */}
           <div className="bg-[#FD8641] rounded-3xl rounded-tl-none p-4 sm:p-8 mb-12 text-white max-w-2xl z-50 relative">
             <div className="">
@@ -202,7 +224,7 @@ const Page = () => {
           />
 
           {/* Goals Card */}
-          <div className="bg-[#5ABB76] rounded-3xl p-8 text-white max-w-2xl ml-auto sm:relative -top-48 rounded-tr-none flex items-end">
+          <div className="bg-[#5ABB76] rounded-3xl p-8 text-white max-w-2xl ml-auto lg:relative -top-48 rounded-tr-none flex items-end md:mb-2">
             <div className="w-full">
               <div className="flex mb-6 items-end flex-col sm:px-12 sm:mx-16">
                 <Target className="w-20 h-20 text-right" />
@@ -238,14 +260,21 @@ const Page = () => {
           </p>
         </div>
       </div>
-
       <div className="relative">
         <ArrowComponent
-          className="absolute h-[10rem] sm:h-[14rem] rotate-[21deg] -top-[8.75rem] sm:-top-[12rem] text-blue-100 left-[8rem] sm:left-[25rem] z-50"
+          className="
+      absolute 
+      h-[4rem] sm:h-[10rem] md:h-[9rem] lg:h-[10rem] 
+      rotate-[21deg] 
+      -top-[3rem] sm:-top-[8rem] md:-top-[6rem] lg:-top-[7rem] 
+      left-[4rem] sm:left-[8rem] md:left-[15rem] lg:left-[40rem] 
+      text-blue-100 
+      z-50
+    "
           fill="#FD8641"
           id="contactArrow"
         />
-        <div className="mt-28" id="contact">
+        <div className=" sm:mt-12" id="contact">
           <ContactForm />
         </div>
       </div>
