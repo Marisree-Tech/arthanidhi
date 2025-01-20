@@ -6,7 +6,7 @@ const APP_DETAILS = {
 
 const VALUES = {
   APP_DETAILS,
-  TYPEFORM_ID: "UbqgPx5I",
+  TYPEFORM_ID: "S8rYEjPu",
 };
 
 export default VALUES;
